@@ -1,20 +1,40 @@
 # TorrentEngine Library
 
-Либа для моего клиента и других независимых проектов где нужен простой торрент движок.
+Android торрент движок на основе LibTorrent4j для простой интеграции торрент функционала в любое приложение.
+
+[![](https://jitpack.io/v/Ernous/torrent-engine.svg)](https://jitpack.io/#Ernous/torrent-engine)
 
 ## Установка
 
-### 1. Добавьте модуль в `settings.gradle.kts`:
+### Шаг 1: Добавьте JitPack репозиторий
+
+В файл `settings.gradle.kts` (или `build.gradle` для старых проектов):
 
 ```kotlin
-include(":torrentengine")
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
 ```
 
-### 2. Добавьте зависимость в `app/build.gradle.kts`:
+### Шаг 2: Добавьте зависимость
+
+В файл `app/build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation(project(":torrentengine"))
+    implementation("com.github.Ernous:torrent-engine:1.0.0")
+}
+```
+
+Или используйте последнюю версию из main ветки:
+
+```kotlin
+dependencies {
+    implementation("com.github.Ernous:torrent-engine:main-SNAPSHOT")
 }
 ```
 
